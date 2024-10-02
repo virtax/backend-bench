@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  node-express-app:
+    build: ./node-express-app
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+
+  go-gin-app:
+    build: ./go-gin-app
+    ports:
+      - "8080:8080"
+    networks:
+      - backend
+
+  python-django-app:
+    build: ./python-django-app
+    ports:
+      - "8000:8000"
+    networks:
+      - backend
+
+  tester:
+    build: ./tester
+    depends_on:
+      - node-express-app
+      - go-gin-app
+      - python-django-app
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge

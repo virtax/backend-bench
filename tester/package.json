@@ -1,0 +1,10 @@
+{
+  "name": "tester",
+  "version": "1.0.0",
+  "description": "Node.js service for benchmarking Node.js and Go apps using Apache Benchmark",
+  "main": "tester.js",
+  "scripts": {
+    "start": "node tester.js"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,12 @@
+{
+  "name": "node-express-app",
+  "version": "1.0.0",
+  "description": "Hello World Express App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
