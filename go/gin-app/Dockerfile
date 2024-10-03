@@ -12,10 +12,10 @@ RUN go mod download
 COPY . .
 
 # Build the Go app
-RUN go build -o hello-world-app .
+RUN go build -o gin-app .
 
-# Expose port 8080
-EXPOSE 8080
+# Expose port 3000
+EXPOSE 3000
 
 # Start the app
-CMD ["./hello-world-app"]
+CMD ["./gin-app"]

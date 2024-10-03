@@ -10,8 +10,8 @@ RUN pip install --no-cache-dir "Django>=4.0,<5.0"
 # Copy the application code
 COPY . .
 
-# Expose port 8000 for the Django app
-EXPOSE 8000
+# Expose port 3200 for the Django app
+EXPOSE 3200
 
 # Run Django's development server without reloader
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000", "--noreload"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:3200", "--noreload"]

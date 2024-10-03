@@ -1,23 +1,30 @@
 version: '3.8'
 services:
-  node-express-app:
-    build: ./node-express-app
+  go-gin-app:
+    build: ./go/gin-app
     ports:
       - "3000:3000"
     networks:
       - backend
 
-  go-gin-app:
-    build: ./go-gin-app
+  node-express-app:
+    build: ./node/express-app
     ports:
-      - "8080:8080"
+      - "3100:3100"
+    networks:
+      - backend
+
+  fastify-app:
+    build: ./node/fastify-app
+    ports:
+      - "3101:3101"
     networks:
       - backend
 
   python-django-app:
-    build: ./python-django-app
+    build: ./python/django-app
     ports:
-      - "8000:8000"
+      - "3200:3200"
     networks:
       - backend
 

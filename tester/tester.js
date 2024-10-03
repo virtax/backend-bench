@@ -59,9 +59,10 @@ function printSortedResults() {
 
 // Run tests 3 times for each service
 setTimeout(() => {
-  runMultipleBenchmarks('Node.js Express', 'http://node-express-app:3000/', 3);
-  runMultipleBenchmarks('Go Gin', 'http://go-gin-app:8080/', 3);
-  runMultipleBenchmarks('Python Django', 'http://python-django-app:8000/', 3);
+  runMultipleBenchmarks('Go Gin', 'http://go-gin-app:3000/', 3);
+  runMultipleBenchmarks('Node Express', 'http://node-express-app:3100/', 3);
+  runMultipleBenchmarks('Node Fastify', 'http://fastify-app:3101/', 3);
+  runMultipleBenchmarks('Python Django', 'http://python-django-app:3200/', 3);
   printSortedResults();
 
 }, 5000); // Initial 5-second delay before starting tests

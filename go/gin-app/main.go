@@ -19,6 +19,6 @@ func main() {
 		c.String(200, "Hello, World!")
 	})
 
-	// Start the server on port 8080
-	router.Run(":8080")
+	// Start the server on port 3200
+	router.Run(":3000")
 }
